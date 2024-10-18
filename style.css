@@ -1,0 +1,558 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c; /* Cinza escuro mais confortável */
+  color: #efedeb; /* Texto claro */
+}
+
+/* Estilos do título */
+.h1 {
+  background-color: #2b2b2b; /* Fundo escuro para o título */
+  color: #efedeb; /* Texto claro */
+  padding: 30px 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra leve no texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+/* Estilos da barra de navegação */
+nav {
+  background-color: #2a2a2a; /* Fundo escuro para o menu */
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espalha menu e botões para os lados opostos */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.menu {
+  display: flex; /* Mantém os itens do menu em linha */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a, .dropdown-content a {
+  font-family: "Lexend", sans-serif; /* Garante que todos usem a mesma fonte */
+  color: #efedeb; /* Texto claro */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  padding: 10px;
+  display: block;
+  position: relative; /* Para o pseudo-elemento */
+}
+
+nav ul li a::after, .dropdown-content a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px; /* Linha mais fina */
+  background-color: rgb(180, 169, 115);
+  box-shadow: 0 0 8px rgba(180, 169, 115, 0.7), 0 0 15px rgba(180, 169, 115, 0.5); /* Efeito de luz */
+  transition: width 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+nav ul li a:hover::after, .dropdown-content a:hover::after {
+  width: 100%; /* Linha completa no hover */
+  box-shadow: 0 0 15px rgba(180, 169, 115, 1), 0 0 30px rgba(180, 169, 115, 0.7); /* Efeito mais intenso */
+}
+
+nav ul li a:hover, .dropdown-content a:hover {
+  color: #b4a973; /* Cor dourada no hover */
+}
+
+/* Estilos específicos para o dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2a2a2a; /* Fundo escuro para combinar com o menu */
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #efedeb; /* Texto claro no dropdown */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #2a2a2a; /* Fundo dourado no hover */
+  color: #1c1c1c; /* Texto escuro no hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Remove padding negativo no .joiasbtn */
+.menu-item {
+  font-family: "Lexend", sans-serif; /* Garante a mesma fonte */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  padding: 10px;
+  display: block;
+}
+
+.menu-item:hover {
+  color: #b4a973; /* Cor dourada no hover */
+}
+
+.h1 {
+  background-color: #2b2b2b; /* Fundo escuro para o título */
+  color: #efedeb; /* Texto claro */
+  padding: 30px 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra leve no texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+h2{
+  color: #b4a973;
+  text-align: center;
+  padding: 30px;
+}
+
+h3{
+  text-align: center;
+  padding: 30px;
+}
+
+h4{
+  text-align: center;
+  padding: 30px;
+}
+
+h5{
+  text-align: center;
+  padding: 30px;
+}
+
+ol{
+  padding: 30px;
+  list-style-type: circle;
+}
+
+.container {
+  text-align: center;
+}
+
+.imagem {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link{
+  align-items: center;
+  text-align: center;
+  color: #b4a973;
+}
+p{
+  text-align: center;
+}
+
+.falcao p{
+  text-align: center;
+}
+.falcao ol{
+    padding: 30px;
+    list-style-type: circle;
+    text-align: center
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+/* Estilos para a seção de biografia */
+.biografia-section {
+  padding: 20px 0;
+  background-color:  #1c1c1c;
+}
+
+.biografia-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.biografia-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.biografia-imagem img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.biografia-texto {
+  max-width: 600px;
+}
+
+.biografia-texto h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.biografia-texto p {
+  font-size: 1.25rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .biografia-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .biografia-imagem {
+    margin-bottom: 20px;
+  }
+}
+
+.product-cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.card {
+  width: 300px;
+  background-color: #2a2a2a; /* Fundo escuro para os cards */
+  color: #efedeb; /* Texto claro */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para flutuação */
+}
+.card:hover {
+  transform: translateY(-10px); /* Eleva o card para dar o efeito de flutuação */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar a impressão de profundidade */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 20px 0;
+  color: #333;
+}
+
+.card p {
+  color: #777;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b4a973; /* Botão com cor dourada */
+  color: #1c1c1c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #efedeb; /* Cor clara no hover */
+}
+
+footer {
+  background-color: #2a2a2a; /* Fundo escuro */
+  color: #efedeb; /* Texto claro */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+  color: #b4a973; /* Cor dourada para títulos */
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: rgb(180, 169, 115);
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #78818e;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.photo-gallery {
+  padding: 50px;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+.photo-gallery h2 {
+  font-family: 'Lexend', sans-serif; /* Usando a mesma fonte do dropdown */
+  font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+  font-weight: 300; /* Peso mais fino */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: #b4a973; /* Título da galeria em dourado */
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.gallery-item img {
+  width: 300px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Ajusta o preenchimento da imagem */
+  border-radius: 5px; /* Bordas arredondadas */
+  filter: brightness(0.85); /* Reduz o brilho para harmonizar com o fundo escuro */
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px); /* Efeito de flutuação */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw; /* Ocupa toda a largura da janela de visualização */
+  position: relative;
+  margin: 0; /* Remove a margem para que o slideshow vá até a borda */
+  background-color: #2a2a2a; /* Fundo escuro */
+}
+
+.slideshow-container img {
+  width: 100%; /* As imagens vão ocupar toda a largura do slideshow */
+  height: auto; /* Mantém a proporção original das imagens */
+}
+
+/* Ocultar as imagens por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Remover as bordas padrão das imagens */
+.mySlides img {
+  border: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #efedeb; /* Botões de navegação claros */
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Alterar os dots para linhas */
+.dot {
+  cursor: pointer;
+  height: 5px; /* Altura reduzida */
+  width: 30px; /* Largura mantida */
+  margin: 0 10px; /* Aumenta a área clicável sem mudar a aparência */
+  background-color: #777; /* Dots em tons escuros */
+  border-radius: 5px; /* Arredondar as extremidades */
+  display: inline-block;
+  transition: background-color 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Profundidade com sombra */
+  padding: 2px; /* Aumenta a área clicável */
+}
+
+.active, .dot:hover {
+  background-color: #b4a973; /* Dots com cor dourada no hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Mais profundidade ao hover */
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Remove o scroll horizontal, caso necessário */
+}
+
+.search-login {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.search-bar {
+  padding: 10px;
+  border: none; /* Remove bordas */
+  border-radius: 25px; /* Arredondar completamente */
+  font-family: 'Lexend', sans-serif; /* Fonte bonita */
+  margin-right: 10px; /* Espaço entre a barra de pesquisa e os botões */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  background-color: #333333; /* Fundo escuro para a barra de pesquisa */
+}
+
+.login-btn, .entrar-btn {
+  background-color: #b4a973; /* Botões com cor dourada */
+  color: #1c1c1c; /* Texto escuro */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  margin-left: 5px; /* Espaço entre os botões */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-btn:hover, .entrar-btn:hover {
+  background-color: #efedeb; /* Fica claro ao passar o mouse */
+  color: #1c1c1c; /* Texto escuro no hover */
+  transform: scale(1.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espalha menu e botões para os lados opostos */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.menu {
+  display: flex; /* Mantém os itens do menu em linha */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px; /* Espaço entre os itens do menu */
+}
